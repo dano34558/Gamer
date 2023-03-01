@@ -13,3 +13,5 @@ class StateMachine:
 
         self.current_state.update()
 
+    def render(self, screen):
+        self.current_state.render(screen)

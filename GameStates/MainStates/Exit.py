@@ -1,18 +1,17 @@
-class State:
+from State import State
+
+class Exit(State):
     def __init__(self):
-        self.next_state = None
+        super().__init__()
 
     def enter(self):
-        pass
+        print("Entering Exit state")
 
     def exit(self):
-        pass
+        print("Exiting Exit state")
 
     def update(self):
         pass
 
     def render(self, screen):
-        pass
-
-    def handle_events(self):
         pass

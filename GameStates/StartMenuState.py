@@ -1,5 +1,5 @@
-import State
 import pygame
+from .State import State
 
 class StartMenuState(State):
     def __init__(self):
@@ -13,8 +13,8 @@ class StartMenuState(State):
         self.title_text = self.font.render("My Game", True, (255, 255, 255))
         self.title_rect = self.title_text.get_rect(center=(self.screen_width//2, self.screen_height//2 - 100))
 
-        self.start_text = self.font.render("Start Game", True, (255, 255, 255))
-        self.start_rect = self.start_text.get_rect(center=(self.screen_width//2, self.screen_height//2 + 50))
+        self.new_game_text = self.font.render("New Game", True, (255, 255, 255))
+        self.new_game_rect = self.new_game_text.get_rect(center=(self.screen_width//2, self.screen_height//2 + 50))
 
         self.quit_text = self.font.render("Quit Game", True, (255, 255, 255))
         self.quit_rect = self.quit_text.get_rect(center=(self.screen_width//2, self.screen_height//2 + 100))
@@ -32,7 +32,7 @@ class StartMenuState(State):
         screen.fill((0, 0, 0))
 
         screen.blit(self.title_text, self.title_rect)
-        screen.blit(self.start_text, self.start_rect)
+        screen.blit(self.new_game_text, self.new_game_rect)
         screen.blit(self.quit_text, self.quit_rect)
 
         pygame.display.flip()
@@ -49,8 +49,8 @@ class StartMenuState(State):
                     quit()
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                if self.start_rect.collidepoint(pygame.mouse.get_pos()):
-                    print("Start game!")
+                if self.new_game_rect.collidepoint(pygame.mouse.get_pos()):
+                    print("Starting new game!")
                     self.next_state = "new_game"
                 elif self.quit_rect.collidepoint(pygame.mouse.get_pos()):
                     pygame.quit()
