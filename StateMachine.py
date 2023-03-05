@@ -1,3 +1,5 @@
+from GameStates.State import State
+
 class StateMachine:
     def __init__(self, initial_state):
         self.current_state = initial_state
@@ -12,6 +14,7 @@ class StateMachine:
             self.switch_state(self.current_state.next_state)
 
         self.current_state.update()
+        self.current_state.handle_events()
 
     def render(self, screen):
         self.current_state.render(screen)
