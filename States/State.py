@@ -1,7 +1,7 @@
 class State:
-    def __init__(self):
+    def __init__(self,_dialog):
         self.next_state = None
-
+        self.dialog = _dialog
     def enter(self):
         pass
 

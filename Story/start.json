@@ -1,0 +1,46 @@
+{
+    "root": {
+      "type": "dialog",
+      "text": "Your eyes snap open. You find yourself slumped against a giant tree. A voice calls out from the darkness, 'Who goes there?'",
+      "next_node": "question1"
+    },
+    "question1": {
+      "type": "question",
+      "text": "What is your name?",
+      "variable": "name",
+      "next_node": "question2"
+    },
+    "question2": {
+      "type": "question",
+      "text": "Are you male or female?",
+      "options": ["Male", "Female"],
+      "variable": "sex",
+      "next_node": "question3"
+    },
+    "question3": {
+      "type": "question",
+      "text": "What race do you belong to?",
+      "options": ["Human", "Elf", "Dwarf", "Orc"],
+      "variable": "race",
+      "next_node": "question4"
+    },
+    "question4": {
+      "type": "question",
+      "text": "What was your background before you found yourself here?",
+      "options": ["Farmer", "Blacksmith", "Merchant", "Noble"],
+      "variable": "background",
+      "next_node": "question5"
+    },
+    "question5": {
+      "type": "question",
+      "text": "What was your greatest fear before coming here?",
+      "variable": "fear",
+      "next_node": "question6"
+    },
+    "question6": {
+      "type": "question",
+      "text": "What was your greatest strength before coming here?",
+      "variable": "strength",
+      "next_node": null
+    }
+  }

@@ -1,4 +1,0 @@
-user opens game ---> GameManagers main StateMachine enters the Start State.
-start State ---> enters "Menu" state
-menu state ---> renders the menu, and listens for user input on the buttons
-to determine wich is the next state.    
