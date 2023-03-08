@@ -1,0 +1,60 @@
+{
+    "root": {
+        "type": "story",
+        "text": "Welcome to the game!",
+        "options": [
+            {
+                "text": "Continue",
+                "path": "question1"
+            }
+        ]
+    },
+    "question1": {
+        "type": "question",
+        "text": "What is your name?",
+        "input": true,
+        "options": []
+    },
+    "question2": {
+        "type": "question",
+        "text": "What is your race?",
+        "input": false,
+        "options": [
+            {
+                "text": "Human",
+                "path": "question3"
+            },
+            {
+                "text": "Elf",
+                "path": "question3"
+            },
+            {
+                "text": "Orc",
+                "path": "question3"
+            }
+        ]
+    },
+    "question3": {
+        "type": "question",
+        "text": "What is your class?",
+        "input": false,
+        "options": [
+            {
+                "text": "Warrior",
+                "path": "end1"
+            },
+            {
+                "text": "Mage",
+                "path": "end1"
+            },
+            {
+                "text": "Rogue",
+                "path": "end1"
+            }
+        ]
+    },
+    "end1": {
+        "type": "story",
+        "text": "Congratulations, you have finished the game!"
+    }
+}
